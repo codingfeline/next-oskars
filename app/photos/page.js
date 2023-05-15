@@ -1,9 +1,7 @@
-import React from 'react'
-
 const About = () => {
   return (
-    <section className="w-full flex-center flex-col">
-      <h2 className="head_text text-center gradient">photos</h2>
+    <section className="mb-auto">
+      <h2>photos</h2>
     </section>
   )
 }
