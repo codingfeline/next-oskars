@@ -18,7 +18,6 @@ const Header = () => {
   const links = [
     { to: '/', page: 'Home' },
     { to: '/photos', page: 'Photos' },
-    { to: '/locate-us', page: 'Locate Us' },
     { to: '/contact-us', page: 'Contact Us' },
   ]
 
