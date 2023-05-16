@@ -30,7 +30,7 @@
     @apply rounded border-gray-300 text-indigo-500 focus:ring-indigo-500 mr-2;
   }
   [type='submit'] {
-    @apply cursor-pointer hover:bg-slate-300;
+    @apply cursor-pointer hover:bg-slate-300 p-2;
   }
 }
 form {
@@ -65,5 +65,8 @@ h1 {
   @apply bg-blue-200 w-full block;
 }
 .nav-a {
-  @apply p-4 px-2 block  text-center;
+  @apply p-4 px-2 block text-center;
+}
+.flex-screen {
+  @apply flex flex-col h-screen;
 }
