@@ -1,5 +1,7 @@
 'use client'
 
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
@@ -24,11 +26,17 @@ const Header = () => {
   return (
     <>
       <nav className=" flex flex-col">
-        <div className="bg-slate-100 md:hidden z-40">
-          <button onClick={toggleMenu}>toggleMenu</button>
+        <div className="bg-slate-100 md:hidden z-40 text-center">
+          {/* <button onClick={toggleMenu}>toggleMenu</button> */}
+          <FontAwesomeIcon
+            icon={faBars}
+            size="3x"
+            onClick={toggleMenu}
+            className="hover:cursor-pointer hover:text-slate-500"
+          />
         </div>
         <div
-          className={`duration-200 md:static absolute bg-blue-100 md:min-h-fit min-h-[100vh] left-0  md:w-auto  w-full flex items-center justify-center  z-50 
+          className={`duration-200 md:static absolute bg-blue-100 md:min-h-fit min-h-[100vh] left-0  md:w-auto  w-full flex items-center justify-center  z-50 hover:cursor-pointer 
       ${!hidden ? 'top-[0%]' : 'top-[-110%]'}
       `}
           onClick={collapse}
