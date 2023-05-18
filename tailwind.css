@@ -67,6 +67,9 @@ h1 {
 .nav-a {
   @apply p-4 px-2 block text-center;
 }
-.flex-screen {
-  @apply flex flex-col h-screen;
+.flex_screen {
+  @apply flex flex-col min-h-screen mb-auto;
+}
+svg {
+  @apply text-5xl text-slate-600;
 }
