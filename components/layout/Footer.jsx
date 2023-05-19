@@ -1,12 +1,15 @@
 import { faEnvelope, faFaceAngry } from '@fortawesome/free-regular-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaFacebook, FaPhone } from 'react-icons/fa'
 
 const Footer = () => {
   return (
     <footer className="p-3 bg-slate-200">
       <ul
-        className=" flex flex-col items-center tracking-widest sm:tracking-normal 
+        className="grid sm:grid-cols-2 lg:grid-cols-4
+        items-center 
+        tracking-widest md:tracking-normal 
       md:flex-row md:justify-between"
       >
         <li>&copy; {new Date().getFullYear()} Oskars Barbers</li>
@@ -14,11 +17,13 @@ const Footer = () => {
 
         <li>
           <phoneIcon />
-          <a href="tel:07447008787">07447 008787</a>
+          <a href="tel:07447008787">
+            <FaPhone className="text-base inline" /> 07447 008787
+          </a>
         </li>
         <li>
           <a href="http://www.facebook.com/oskarsbarbers" target="oskars">
-            Follow us on Facebook
+            Follow us on <FaFacebook className="text-base inline" />
           </a>
         </li>
       </ul>
