@@ -5,7 +5,7 @@ import { FaFacebook, FaPhone } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className="p-3 bg-slate-200">
+    <footer className="p-2 mt-5 bg-slate-200">
       <ul
         className="grid sm:grid-cols-2 lg:grid-cols-4
         items-center 
