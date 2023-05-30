@@ -1,10 +1,9 @@
 'use client'
 
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import { FaBars } from 'react-icons/fa'
 
 const Header = () => {
   const [hidden, setHidden] = useState(true)
@@ -20,6 +19,7 @@ const Header = () => {
   const links = [
     { to: '/', page: 'Home' },
     { to: '/photos', page: 'Photos' },
+    { to: '/locate-us', page: 'Locate' },
     { to: '/contact-us', page: 'Contact Us' },
   ]
 
@@ -28,16 +28,15 @@ const Header = () => {
       <nav className=" flex flex-col">
         <div className="bg-slate-100 md:hidden z-40 text-center">
           {/* <button onClick={toggleMenu}>toggleMenu</button> */}
-          <FontAwesomeIcon
-            icon={faBars}
-            size="3x"
+
+          <FaBars
             onClick={toggleMenu}
-            className="hover:cursor-pointer hover:text-slate-500"
+            className="hover:cursor-pointer hover:text-slate-800 w-full"
           />
         </div>
         <div
           className={`duration-200 md:static absolute bg-blue-100 md:min-h-fit min-h-[100vh] left-0  md:w-auto  w-full flex items-center justify-center  z-50 hover:cursor-pointer 
-      ${!hidden ? 'top-[0%]' : 'top-[-110%]'}
+      ${!hidden ? 'top-[0%]' : 'top-[-120%]'}
       `}
           onClick={collapse}
         >
