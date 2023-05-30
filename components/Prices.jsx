@@ -17,7 +17,7 @@ const Prices = () => {
   return (
     <ul className="flex flex-col items-center">
       {prices.map(price => (
-        <li>
+        <li key={price.price_id}>
           {price.item} <span>&pound; {price.price}</span>
         </li>
       ))}
