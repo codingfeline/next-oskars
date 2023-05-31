@@ -1,18 +1,13 @@
-'use client'
+async function getPrices() {
+  const res = await fetch('https://oskarsbarbers4men.co.uk/indexAPI.php')
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
 
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-
-const Prices = () => {
-  const [prices, setPrices] = useState([])
-  useEffect(() => {
-    async function getPrices() {
-      axios.get('https://oskarsbarbers4men.co.uk/indexAPI.php').then(res => {
-        setPrices(res.data)
-      })
-    }
-    getPrices()
-  }, [])
+  return res.json()
+}
+const Prices = async () => {
+  const prices = await getPrices()
 
   return (
     <ul className="flex flex-col items-center">
