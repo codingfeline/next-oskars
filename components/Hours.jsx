@@ -1,33 +1,26 @@
-'use client'
+async function getHours() {
+  const res = await fetch('https://oskarsbarbers4men.co.uk/indexAPI_hours.php')
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
 
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-
-const OpeningHours = () => {
-  const [hours, setHours] = useState([])
-
-  useEffect(() => {
-    async function getHours() {
-      axios
-        .get('https://oskarsbarbers4men.co.uk/indexAPI_hours.php')
-        .then(res => {
-          setHours(res.data)
-        })
-    }
-
-    getHours()
-  }, [])
+  return res.json()
+}
+const OpeningHours = async () => {
+  const hours = await getHours()
 
   return (
     <>
       <div
-        className="flex flex-col items-center m-5"
+        className="flex flex-col items-center m-5 animate-pulse"
         id="opening-hours"
         itemScope
         itemType="http://schema.org/openingHours"
       >
         {hours.map(hour => (
           <time
+            key="hour.hour_id"
             className="flex"
             itemProp="openingHours"
             dateTime={
@@ -41,7 +34,6 @@ const OpeningHours = () => {
               ':' +
               hour.end.slice(2)
             }
-            key="hour.hour_id"
           >
             {hour.day} {hour.start} to {hour.end}
           </time>
