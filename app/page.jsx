@@ -3,7 +3,7 @@ import Prices from '@components/Prices'
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex_center overflow-auto  scroll_parent  ">
+    <div className="scroll_parent h-screen  ">
       <main className="flex_center h-screen bg-lime-100 snap-start">
         <div className="flex flex-col justify-between items-center h-50  bg-slate-300 w-full sm:w-4/5 sm:rounded-xl p-8 ">
           <h2>Great friendly family barber shop</h2>
