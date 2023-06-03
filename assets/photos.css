@@ -1,0 +1,54 @@
+.photos_box {
+  @apply relative w-full h-screen overflow-hidden;
+  background: black;
+}
+.tabs input {
+  /* @apply display-none; */
+  visibility: hidden;
+  display: none;
+}
+.buttons {
+  @apply absolute flex;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 10px;
+  z-index: 10000000;
+}
+.buttons label {
+  @apply w-5 h-5 bg-white opacity-50 cursor-pointer;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3) {
+  @apply opacity-100;
+  width: 50px;
+}
+.content {
+  @apply relative flex;
+  width: 300vw;
+  transition: 0.5s;
+}
+.content .box {
+  @apply relative w-screen h-screen flex justify-center items-center select-none p-10;
+}
+.content .box:nth-child(1) {
+  background: linear-gradient(90deg, green, blue);
+}
+.content .box:nth-child(2) {
+  background: linear-gradient(90deg, red, blue);
+}
+.content .box:nth-child(3) {
+  background: linear-gradient(90deg, purple, green);
+}
+.tabs input:nth-child(1):checked ~ .content {
+  left: 0;
+}
+.tabs input:nth-child(2):checked ~ .content {
+  left: -100vw;
+}
+.tabs input:nth-child(3):checked ~ .content {
+  left: -200vw;
+}
