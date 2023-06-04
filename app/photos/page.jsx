@@ -1,3 +1,6 @@
+import '@assets/photos.css'
+import Image from 'next/image'
+
 const Photos = () => {
   return (
     <div className="flex_screen">
@@ -15,19 +18,19 @@ const Photos = () => {
             <div className="box photo1">
               <div className="content_box">
                 <h2>photo 1</h2>
-                <p>lorem50</p>
+                <Image src="/photo1.webp" width={700} height={700} />
               </div>
             </div>
             <div className="box photo2">
               <div className="content_box">
                 <h2>photo 2</h2>
-                <p>lorem50</p>
+                <Image src="/photo4.jpg" width={700} height={700} />
               </div>
             </div>
             <div className="box photo3">
               <div className="content_box">
                 <h2>photo 3</h2>
-                <p>lorem50</p>
+                <Image src="/photo3.webp" width={700} height={700} />
               </div>
             </div>
           </div>
