@@ -13,7 +13,7 @@ const OpeningHours = async () => {
   return (
     <>
       <div
-        className="flex flex-col items-center m-5 animate-pulse"
+        className="flex flex-col items-center m-5 animate-pulse w-60 opacity-80 bg-gray-800 p-3 rounded-lg "
         id="opening-hours"
         itemScope
         itemType="http://schema.org/openingHours"
@@ -21,7 +21,7 @@ const OpeningHours = async () => {
         {hours.map(hour => (
           <time
             key="hour.hour_id"
-            className="flex"
+            className="flex text-white"
             itemProp="openingHours"
             dateTime={
               hour.day_code +
