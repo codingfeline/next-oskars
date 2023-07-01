@@ -10,13 +10,15 @@ const Prices = async () => {
   const prices = await getPrices()
 
   return (
-    <ul className="flex flex-col items-center">
-      {prices.map(price => (
-        <li key={price.price_id}>
-          {price.item} <span>&pound; {price.price}</span>
-        </li>
-      ))}
-    </ul>
+    <div className="w-84 bg-blue-900 opacity-90 p-3 rounded-md">
+      <ul className="flex flex-col items-center text-white">
+        {prices.map(price => (
+          <li key={price.price_id}>
+            {price.item} <span>&pound; {price.price}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
