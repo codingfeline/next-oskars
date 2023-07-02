@@ -1,0 +1,12 @@
+export { faFaceAngry } from '@fortawesome/free-regular-svg-icons'
+export { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+export { faCaretSquareDown, faCaretSquareUp } from '@fortawesome/free-regular-svg-icons'
+export { FontAwesomeIcon as Fawe } from '@fortawesome/react-fontawesome'
+
+export { FaArrowAltCircleDown as Down1 } from 'react-icons/fa'
+export { FaArrowAltCircleUp as Up1 } from 'react-icons/fa'
+export { FaHome as Home } from 'react-icons/fa'
+export { MdAccessTime as Hours } from 'react-icons/md'
+export { HiCurrencyPound as Pound } from 'react-icons/hi'
+export { FaMapMarkerAlt as Map } from 'react-icons/fa'
+export { MdOutlinePhotoSizeSelectActual as Photos } from 'react-icons/md'
