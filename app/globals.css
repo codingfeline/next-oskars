@@ -1,6 +1,7 @@
 @import 'tailwind.css';
+@import 'animate.css';
 
-:root  {
+:root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -22,4 +23,29 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+}
+.bg_barber {
+  background: url('/barber-warm.jpg');
+  @apply bg-cover bg-left-top;
+}
+.bg_clock {
+  background: url('/clock.jpg');
+  @apply bg-cover bg-center;
+}
+.bg_savings {
+  background: url('/savings.jpg');
+  @apply bg-cover bg-center;
+}
+.bg_photos {
+  background: url('/barber-pole.webp');
+  @apply bg-cover bg-center;
+}
+.iconNav {
+  @apply p-3 text-lg;
+}
+svg {
+  @apply text-gray-400 m-2 animate-bounce hover:text-gray-500;
+}
+li svg {
+  @apply animate-none text-lg text-gray-500 hover:text-gray-600;
 }
