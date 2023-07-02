@@ -10,7 +10,7 @@ const Prices = async () => {
   const prices = await getPrices()
 
   return (
-    <div className="w-84 bg-blue-900 opacity-90 p-3 rounded-md">
+    <div className="w-[400px] bg-blue-900 opacity-90 p-3 rounded-md">
       <ul className="flex flex-col items-center text-white">
         {prices.map(price => (
           <li key={price.price_id}>
