@@ -1,14 +1,20 @@
+'use client'
 import OpeningHours from '@components/Hours'
 import Prices from '@components/Prices'
-import { Down1, Up1 } from '@components/icons'
-import Navbar from '@components/layout/Navbar'
-import Image from 'next/image'
+// import { Down1, Up1 } from '@components/icons'
+// import Navbar from '@components/layout/Navbar'
+import { useState } from 'react'
 
 export default function Home() {
+  const [open, setOpen] = useState(true)
+  const Navbar = () => {}
+  const Down1 = () => {}
+  const Up1 = () => {}
+
   return (
     <div className=" h-screen overflow-y-scroll snap-y snap-mandatory ">
       <main className="flex_center h-screen bg-purple-100 snap-start flex-col bg_barber">
-        <div className="flex flex-col justify-between items-center h-50 opacity-90  bg-slate-300 w-full sm:w-4/5 sm:rounded-xl p-8 ">
+        <div className="flex flex-col    opacity-90  bg-slate-300 w-full sm:w-4/5 sm:rounded-xl p-8 ">
           <a name="home"></a>
           <h2 className="animate__animated animate__bounce">
             Great friendly family barber shop
@@ -49,7 +55,7 @@ export default function Home() {
         <a href="#price">
           <Up1 />
         </a>
-        <p>photos</p>
+
         <Navbar />
         <a href="#map">
           <Down1 />
